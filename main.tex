@@ -1,0 +1,125 @@
+% This is the unofficial Wharton template
+% adapted from: https://www.overleaf.com/latex/templates/university-of-udine-unofficial-beamer-theme/zndkgxrjsdzt
+% for questions, contact jiding@wharton.upenn.edu
+
+
+
+\documentclass[usenames,dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim,booktabs,graphicx}
+\usetheme{wharton}
+
+%%% Bibliography
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+\DeclareNameAlias{author}{first-last}
+
+\usepackage{silence}
+\WarningFilter{biblatex}{Patching footnotes failed}
+
+\newcommand{\pdfnewline}{\texorpdfstring{\newline}{ }} 
+\newcommand{\framefill}{\vskip0pt plus 1filll}
+
+
+\title[(short title)]{[Long Title]}
+\date{2019}
+\author[Author]{Author}
+\institute[Wharton]{The Wharton School}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Motivation}
+\begin{center}
+\includegraphics<1>[width=10cm]{figures/t2}
+\includegraphics<2>[width=10cm]{figures/t1}
+\end{center}
+\end{frame}
+
+
+
+\section{Data}
+
+\begin{frame}{Data}
+\begin{itemize}
+    \item The best data set
+\end{itemize}
+\end{frame}
+
+
+\section{Results}
+
+\begin{frame}{Preliminary Results}
+\begin{itemize}
+    \item linear
+    \item nonlinear
+\end{itemize}
+
+\begin{columns}
+    \begin{column}{0.38\textwidth}
+    {\centering
+\begin{table}[!h]
+\label{tab-est}
+\caption{Estimator (Linear) }
+\begin{tabular}{@{}ll@{}}
+\toprule
+ & A \\ \midrule
+ $\beta$& $1.5219$ \\
+ \bottomrule
+\end{tabular}
+\end{table}
+}
+    \end{column}
+    \begin{column}{0.58\textwidth}
+        {\centering
+        \begin{table}[!h]
+\label{tab-est-demo}
+\caption{Estimator (Nonlinear)}
+\begin{tabular}{@{}lll@{}}
+\toprule
+ & A & B \\ \midrule
+ $\sigma$ & $0.0328$&$0.0103$ \\
+ \bottomrule
+\end{tabular}
+\end{table}
+        
+        }
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+
+\framepic[0.35]{figures/t}{
+	\vfill
+	\vspace{1em}
+	\begin{flushright}
+    \textcolor{black}{
+    {\bf Some Text\\
+    Change the number in the square bracket to adjust background transparency\\
+    Change the figure location in the curly braces}}
+    \end{flushright}
+}
+
+
+\begin{frame}{Thank you!}
+\centering
+Title\\
+(work in progress)\\
+Author\\
+\bigskip
+\texttt{your email}
+\end{frame}
+
+
+\end{document}
